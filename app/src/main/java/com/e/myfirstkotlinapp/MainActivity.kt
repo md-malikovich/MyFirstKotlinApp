@@ -1,8 +1,9 @@
 package com.e.myfirstkotlinapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,20 +22,28 @@ class MainActivity : AppCompatActivity() {
         click_btn.setOnClickListener {
             val userName = username_txt.text.toString()
             val password = password_txt.text.toString()
-            UIManager.showToast("$userName $password", this)
+
+            if (userName == "Meder" && password == "qwerty") { //TODO:
+                it.setBackgroundResource(R.drawable.smile) //TODO:
+                //click_btn.visibility = View.INVISIBLE //TODO:
+            }
+
+            else UIManager.showToast("$userName $password", this)
             checkUserData(userName, password)
         }
     }
 
     private fun checkUserData(userName: String, password: String) {
 
-        if (userName == "Meder" && password == "qwerty")
-            UIManager.showToast("Hello, Meder", this)
+        if (userName == "Meder" && password == "qwerty") //TODO:
+            UIManager.showToast("Hello from Trump", this) //TODO:
+
         else if (nameList.contains(userName) && passList.contains(password))
                 startActivity(
                     Intent(this, SecondActivity::class.java)
                         .putExtra("userName", userName)
                         .putExtra("password", password))
+
         else UIManager.showToast("ERROR", this)
     }
 }
