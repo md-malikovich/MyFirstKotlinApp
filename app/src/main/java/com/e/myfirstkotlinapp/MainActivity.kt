@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         mainClick()
     }
 
-    val nameList = mutableListOf("name", "hello", "text")
-    val passList = mutableListOf("123", "123456")
+    private val nameList = mutableListOf("name", "hello", "text", "Meder")
+    private val passList = mutableListOf("123", "123456", "qwerty")
 
     private fun mainClick() {
         click_btn.setOnClickListener {
@@ -27,11 +27,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUserData(userName: String, password: String) {
-        if (nameList.contains(userName) && passList.contains(password))
-            startActivity(
-                Intent(this, SecondActivity::class.java)
-                    .putExtra("userName", userName)
-                    .putExtra("password", password))
+
+        if (userName == "Meder" && password == "qwerty")
+            UIManager.showToast("Hello, Meder", this)
+        else if (nameList.contains(userName) && passList.contains(password))
+                startActivity(
+                    Intent(this, SecondActivity::class.java)
+                        .putExtra("userName", userName)
+                        .putExtra("password", password))
         else UIManager.showToast("ERROR", this)
     }
 }

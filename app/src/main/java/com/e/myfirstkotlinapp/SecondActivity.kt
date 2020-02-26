@@ -19,4 +19,3 @@ class SecondActivity : AppCompatActivity() {
         UIManager.showToast("Hello its class from java", this)
     }
 }
-
