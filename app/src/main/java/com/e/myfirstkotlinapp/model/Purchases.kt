@@ -4,6 +4,7 @@ data class Purchases(
     val number: Int,
     val purchasesName: String,
     val price: Double,
+    val quantity: Int,
     val discount: Double,
     val result: Double = price - discount
 )

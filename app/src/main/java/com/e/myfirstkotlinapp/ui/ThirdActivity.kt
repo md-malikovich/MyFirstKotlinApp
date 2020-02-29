@@ -1,14 +1,40 @@
 package com.e.myfirstkotlinapp.ui
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Adapter
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.e.myfirstkotlinapp.R
+import com.e.myfirstkotlinapp.model.MockModel
+import com.e.myfirstkotlinapp.model.Purchases
 
 class ThirdActivity : AppCompatActivity() {
+
+    private val purchases = mutableListOf<Purchases>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
+    }
+
+    @SuppressLint("WrongConstant")
+    fun recyclerViewBuilder() {
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
+
+        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(2,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(3,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(4,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(5,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(6,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+
+        //val adapter = Adapter(purchases)
+        //recyclerView.adapter = adapter
     }
 }
 /*
