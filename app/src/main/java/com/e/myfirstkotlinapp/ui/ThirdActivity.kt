@@ -24,7 +24,7 @@ class ThirdActivity : AppCompatActivity() {
     @SuppressLint("WrongConstant")
     fun recyclerViewBuilder() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
 
         purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0, 0.5))
         purchases.add(Purchases(2,"Juice", 1.5, 2, 1.0, 0.5))
@@ -33,8 +33,34 @@ class ThirdActivity : AppCompatActivity() {
         purchases.add(Purchases(5,"Juice", 1.5, 2, 1.0, 0.5))
         purchases.add(Purchases(6,"Juice", 1.5, 2, 1.0, 0.5))
         purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(8,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(9,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
+        purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
 
-        val adapter = Adapter(purchases) //TODO:
+        val adapter = com.e.myfirstkotlinapp.ui.recycler.Adapter(purchases)
         recyclerView.adapter = adapter //TODO:
     }
 }
