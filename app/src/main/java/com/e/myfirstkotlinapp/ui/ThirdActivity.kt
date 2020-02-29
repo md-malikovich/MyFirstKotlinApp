@@ -18,6 +18,7 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
+        recyclerViewBuilder()
     }
 
     @SuppressLint("WrongConstant")
@@ -33,8 +34,8 @@ class ThirdActivity : AppCompatActivity() {
         purchases.add(Purchases(6,"Juice", 1.5, 2, 1.0, 0.5))
         purchases.add(Purchases(7,"Juice", 1.5, 2, 1.0, 0.5))
 
-        //val adapter = Adapter(purchases)
-        //recyclerView.adapter = adapter
+        val adapter = Adapter(purchases) //TODO:
+        recyclerView.adapter = adapter //TODO:
     }
 }
 /*
