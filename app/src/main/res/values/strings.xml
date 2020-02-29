@@ -10,11 +10,17 @@
     <string name="tv_result">Итого:</string>
     <string name="tv_result_amount">1057,98 сом</string>
     <string name="tv_discount">Сумма скидки:</string>
-    <string name="tv_discount_amount">107,86 сом сом</string>
+    <string name="tv_discount_amount">107,86 сом</string>
     <string name="tv_number">№</string>
     <string name="tv_purchaseName">Название товара</string>
     <string name="tvQuantity">кол-во</string>
     <string name="tvPrice">цена</string>
     <string name="tv_discountTitle">скидка</string>
     <string name="tv_sumTitle">сумма</string>
+    <string name="tv_item_juice">Напиток</string>
+    <string name="tv_item_number">1</string>
+    <string name="tv_item_purchaseQuantity">42</string>
+    <string name="tv_item_price">1$</string>
+    <string name="tv_item_discount">2.75</string>
+    <string name="tv_item_total">55</string>
 </resources>

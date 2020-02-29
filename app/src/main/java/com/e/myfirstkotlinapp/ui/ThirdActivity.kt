@@ -11,9 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.e.myfirstkotlinapp.R
+import com.e.myfirstkotlinapp.model.MockModel
 import com.e.myfirstkotlinapp.model.Purchases
 import kotlinx.android.synthetic.main.activity_second.view.*
 import kotlinx.android.synthetic.main.activity_third.*
+import kotlinx.android.synthetic.main.item_third_layout.*
+import java.text.FieldPosition
 import java.time.LocalDateTime
 import java.util.*
 
@@ -30,10 +33,20 @@ class ThirdActivity : AppCompatActivity() {
         dateFormat()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     fun initViews() {
         tv_addressAmount.text = "ул.Боконбаева - пр.Мира"
         val totalAmount: TextView = findViewById(R.id.tv_totalAmount)
         val discountAmount: TextView = findViewById(R.id.tv_discountAmount)
+//        val tv_item_number: TextView = findViewById(R.id.tv_item_number)
+//        val tv_item_purchaseResult: TextView = findViewById(R.id.tv_item_purchaseResult)
+//        tv_item_purchaseResult.toString().toDouble()
+//
+//
+//        for (tv_item_number in 0..purchases.size) {
+//            tv_item_purchaseResult += purchases[tv_item_number]
+//        }
+        //MockModel("ул.Боконбаева - пр.Мира", dateFormat(), tv_totalAmount.toString().toDouble(), tv_discountAmount.toDouble())
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -48,9 +61,22 @@ class ThirdActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
 
-        purchases.add(Purchases(1,"Juice", 1.2, 2))
-        purchases.add(Purchases(1,"Juice", 1.2, 2))
-        purchases.add(Purchases(1,"Juice", 1.2, 2))
+        purchases.add(Purchases(1,"Juice", 9.0, 2))
+        purchases.add(Purchases(2,"Juice", 6.0, 3))
+        purchases.add(Purchases(3,"Juice", 3.0, 2))
+        purchases.add(Purchases(4,"Juice", 3.3, 4))
+        purchases.add(Purchases(5,"Juice", 6.6, 2))
+        purchases.add(Purchases(6,"Juice", 1.2, 1))
+        purchases.add(Purchases(7,"Juice", 1.2, 2))
+        purchases.add(Purchases(8,"Juice", 1.2, 5))
+        purchases.add(Purchases(9,"Juice", 1.2, 2))
+        purchases.add(Purchases(3,"Juice", 1.2, 2))
+        purchases.add(Purchases(3,"Juice", 1.2, 7))
+        purchases.add(Purchases(3,"Juice", 1.2, 2))
+        purchases.add(Purchases(3,"Juice", 1.2, 9))
+        purchases.add(Purchases(3,"Juice", 1.2, 2))
+        purchases.add(Purchases(3,"Juice", 1.2, 4))
+        purchases.add(Purchases(3,"Juice", 1.2, 2))
         //purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
 
         val adapter = com.e.myfirstkotlinapp.ui.recycler.Adapter(purchases)
