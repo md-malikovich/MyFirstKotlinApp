@@ -5,6 +5,6 @@ data class Purchases(
     val purchasesName: String,
     val price: Double,
     val quantity: Int,
-    val discount: Double,
-    val result: Double = price - discount
+    val discount: Double = (price / 100) * 3,
+    val result: Double = (quantity * price) - discount
 )

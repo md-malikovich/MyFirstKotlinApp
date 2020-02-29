@@ -32,7 +32,6 @@ class ThirdActivity : AppCompatActivity() {
 
     fun initViews() {
         tv_addressAmount.text = "ул.Боконбаева - пр.Мира"
-
         val totalAmount: TextView = findViewById(R.id.tv_totalAmount)
         val discountAmount: TextView = findViewById(R.id.tv_discountAmount)
     }
@@ -49,32 +48,10 @@ class ThirdActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
 
-        purchases.add(Purchases(1,"Juice", 1.2, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.2, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.3, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.6, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
-        purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
+        purchases.add(Purchases(1,"Juice", 1.2, 2))
+        purchases.add(Purchases(1,"Juice", 1.2, 2))
+        purchases.add(Purchases(1,"Juice", 1.2, 2))
+        //purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
 
         val adapter = com.e.myfirstkotlinapp.ui.recycler.Adapter(purchases)
         recyclerView.adapter = adapter
