@@ -9,96 +9,96 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_constrain"
-        android:layout_width="233dp"
+        android:layout_width="@dimen/layout_width_234dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp">
+        android:layout_marginStart="@dimen/marginStart_16"
+        android:layout_marginTop="@dimen/marginTop_16">
 
         <TextView
-            android:id="@+id/tv_address1"
+            android:id="@+id/tv_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Адрес:"
+            android:text="@string/address"
             android:textColor="@color/colorGrey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_address2"
+            android:id="@+id/tv_addressAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Боконбаева - Пр.Мира"
+            android:text="@string/tv_address"
             android:textColor="@color/colorBlack"
             android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/tv_address1"
+            app:layout_constraintStart_toEndOf="@+id/tv_address"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_date1"
+            android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Дата:"
+            android:text="@string/tv_date"
             android:textColor="@color/colorGrey"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_address1" />
+            app:layout_constraintTop_toBottomOf="@id/tv_address" />
 
         <TextView
-            android:id="@+id/tv_date2"
+            android:id="@+id/tv_dateAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="17:55, Черверг 27.02.2020"
+            android:text="@string/tv_time_date"
             android:textColor="@color/colorBlack"
             android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/tv_date1"
-            app:layout_constraintTop_toBottomOf="@id/tv_address2" />
+            app:layout_constraintStart_toEndOf="@+id/tv_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_addressAmount" />
 
         <TextView
-            android:id="@+id/tv_total1"
+            android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Итого:"
+            android:text="@string/tv_result"
             android:textColor="@color/colorGrey"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_date1" />
+            app:layout_constraintTop_toBottomOf="@id/tv_date" />
 
         <TextView
-            android:id="@+id/tv_total2"
+            android:id="@+id/tv_totalAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
-            android:text="1057,98 сом"
+            android:text="@string/tv_result_amount"
             android:textColor="@color/colorBlack"
             android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/tv_total1"
-            app:layout_constraintTop_toBottomOf="@id/tv_date2" />
+            app:layout_constraintStart_toEndOf="@+id/tv_total"
+            app:layout_constraintTop_toBottomOf="@id/tv_dateAmount" />
 
         <TextView
-            android:id="@+id/tv_discount1"
+            android:id="@+id/tv_discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Сумма скидки:"
+            android:text="@string/tv_discount"
             android:textColor="@color/colorGrey"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_total1" />
+            app:layout_constraintTop_toBottomOf="@id/tv_total" />
 
         <TextView
-            android:id="@+id/tv_discount2"
+            android:id="@+id/tv_discountAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="107,86 сом сом"
+            android:text="@string/tv_discount_amount"
             android:textColor="@color/colorBlack"
             android:textSize="14dp"
-            app:layout_constraintStart_toEndOf="@+id/tv_discount1"
-            app:layout_constraintTop_toBottomOf="@id/tv_total2" />
+            app:layout_constraintStart_toEndOf="@+id/tv_discount"
+            app:layout_constraintTop_toBottomOf="@id/tv_totalAmount" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,55 +111,55 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_number"
+            android:id="@+id/tv_numberTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="№"
+            android:text="@string/tv_number"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/tv_goodsName"
+            android:id="@+id/tv_goodsNameTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Название товара"
+            android:text="@string/tv_purchaseName"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/tv_quantity"
+            android:id="@+id/tv_quantityTitle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="18dp"
-            android:text="кол-во"
+            android:text="@string/tvQuantity"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/tv_price"
+            android:id="@+id/tv_priceTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="цена"
+            android:text="@string/tvPrice"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/tv_discountAmount"
+            android:id="@+id/tv_discountTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="скидка"
+            android:text="@string/tv_discountTitle"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/tv_sum"
+            android:id="@+id/tv_sumTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="сумма"
+            android:text="@string/tv_sumTitle"
             android:textColor="@color/colorGrey"
             android:textSize="13dp" />
 
@@ -168,7 +168,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="390dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="8dp"
