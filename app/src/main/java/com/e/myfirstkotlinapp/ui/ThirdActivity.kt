@@ -36,8 +36,8 @@ class ThirdActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     fun initViews() {
         tv_addressAmount.text = "ул.Боконбаева - пр.Мира"
-        val totalAmount: TextView = findViewById(R.id.tv_totalAmount)
-        val discountAmount: TextView = findViewById(R.id.tv_discountAmount)
+        var totalAmount: TextView = findViewById(R.id.tv_totalAmount)
+        var discountAmount: TextView = findViewById(R.id.tv_discountAmount)
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
