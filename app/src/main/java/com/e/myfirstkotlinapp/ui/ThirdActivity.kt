@@ -38,15 +38,6 @@ class ThirdActivity : AppCompatActivity() {
         tv_addressAmount.text = "ул.Боконбаева - пр.Мира"
         val totalAmount: TextView = findViewById(R.id.tv_totalAmount)
         val discountAmount: TextView = findViewById(R.id.tv_discountAmount)
-//        val tv_item_number: TextView = findViewById(R.id.tv_item_number)
-//        val tv_item_purchaseResult: TextView = findViewById(R.id.tv_item_purchaseResult)
-//        tv_item_purchaseResult.toString().toDouble()
-//
-//
-//        for (tv_item_number in 0..purchases.size) {
-//            tv_item_purchaseResult += purchases[tv_item_number]
-//        }
-        //MockModel("ул.Боконбаева - пр.Мира", dateFormat(), tv_totalAmount.toString().toDouble(), tv_discountAmount.toDouble())
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -77,7 +68,6 @@ class ThirdActivity : AppCompatActivity() {
         purchases.add(Purchases(3,"Juice", 1.2, 2))
         purchases.add(Purchases(3,"Juice", 1.2, 4))
         purchases.add(Purchases(3,"Juice", 1.2, 2))
-        //purchases.add(Purchases(1,"Juice", 1.5, 2, 1.0))
 
         val adapter = com.e.myfirstkotlinapp.ui.recycler.Adapter(purchases)
         recyclerView.adapter = adapter
